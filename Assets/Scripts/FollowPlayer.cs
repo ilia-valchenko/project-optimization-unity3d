@@ -12,8 +12,7 @@ public class FollowPlayer : MonoBehaviour
         _player = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         transform.position = _player.transform.position + _offset;
     }
