@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    private const float Offset = 5.0f;
+    private readonly Vector3 _offset = new Vector3(5.0f, 3.3f, 0);
 
     private GameObject _player;
 
@@ -15,6 +15,6 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = _player.transform.position + new Vector3(Offset, 3.3f, 0);
+        transform.position = _player.transform.position + _offset;
     }
 }
