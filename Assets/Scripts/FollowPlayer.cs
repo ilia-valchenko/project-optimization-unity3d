@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    private readonly Vector3 _offset = new Vector3(5.0f, 3.3f, 0);
+    [SerializeField] private Vector3 _offset = new Vector3(-1f, 1.4f, 0);
 
     private GameObject _player;
 
@@ -15,5 +15,6 @@ public class FollowPlayer : MonoBehaviour
     void LateUpdate()
     {
         transform.position = _player.transform.position + _offset;
+        transform.rotation = _player.transform.rotation;
     }
 }
