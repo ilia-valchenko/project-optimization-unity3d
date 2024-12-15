@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
@@ -7,8 +9,8 @@ public class DetectCollisions : MonoBehaviour
         // Instead of destroying the projectile when it collides with an animal
         //Destroy(other.gameObject); 
 
-        //// Just deactivate the food and destroy the animal
-        //other.gameObject.SetActive(false);
+        // Just deactivate the food and destroy the animal
+        other.gameObject.SetActive(false);
         Destroy(gameObject);
     }
 

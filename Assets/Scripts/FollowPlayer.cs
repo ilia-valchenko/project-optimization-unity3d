@@ -12,7 +12,17 @@ public class FollowPlayer : MonoBehaviour
         _player = GameObject.Find("Player");
     }
 
-    void LateUpdate()
+    //void LateUpdate()
+    //{
+    //    transform.position = _player.transform.position + _offset;
+    //    transform.rotation = _player.transform.rotation;
+    //}
+
+    //private void Awake()
+    //{
+    //}
+
+    private void LateUpdate()
     {
         transform.position = _player.transform.position + _offset;
         transform.rotation = _player.transform.rotation;
